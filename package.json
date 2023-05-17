@@ -1,0 +1,15 @@
+{
+	"name": "banken",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"type": "module",
+	"dependencies": {
+		"express": "^4.18.2",
+		"mongodb": "^5.5.0",
+		"nodemon": "^2.0.22"
+	},
+	"scripts": {
+		"start": "nodemon server.js"
+	}
+}
