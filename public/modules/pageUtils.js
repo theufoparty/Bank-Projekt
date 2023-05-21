@@ -1,5 +1,5 @@
 export const addHeader = () => {
-	const user = localStorage.getItem("user");
+	const user = Cookies.get("user");
 	const header = document.createElement("header");
 	header.innerHTML = `
 	    <header class="header">
@@ -23,7 +23,7 @@ export const addHeader = () => {
 	const logoutButton = header.querySelector("button");
 	if (logoutButton) {
 		logoutButton.addEventListener("click", () => {
-			localStorage.removeItem("user");
+			Cookies.remove("user");
 			fetch("/logout", {
 				method: "POST",
 			}).then(() => {

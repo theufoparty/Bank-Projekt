@@ -21,7 +21,10 @@ form.addEventListener("submit", async (e) => {
 		})
 		.then((data) => {
 			if (data.success) {
-				localStorage.setItem("user", JSON.stringify(data.user));
+				const inFiveMinutes = new Date(new Date().getTime() + 5 * 60 * 1000);
+				Cookies.set("user", data.user, {
+					expires: inFiveMinutes,
+				});
 				window.location.href = "./accounts.html";
 			}
 		});
