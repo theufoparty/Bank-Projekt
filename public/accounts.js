@@ -15,7 +15,7 @@ fetch("/accounts")
 			tr.innerHTML = `
 
             <td>
-                <a href="./account.html?id=${account._id}">
+                <a class="underline" href="./account.html?id=${account._id}">
                     ${account.name}
                 </a>
             </td>

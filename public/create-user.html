@@ -7,18 +7,25 @@
 		<title>Create Account</title>
 		<link rel="stylesheet" href="style.css" />
 		<script type="module" src="./create-user.js" defer></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
-		<div class="create-page">
-			<form>
-				<label for="name">Namn:</label>
-				<input type="text" id="name" name="name" />
+		<section class="content-container">
+			<div class="create-page">
+				<h1>CREATE USER</h1>
+				<form>
+					<label for="name">NAME</label>
+					<input type="text" id="name" name="name" />
 
-				<label for="password">Password</label>
-				<input type="password" id="password" name="password" />
+					<label for="password">PASSWORD</label>
+					<input type="password" id="password" name="password" />
 
-				<button>Skicka</button>
-			</form>
-		</div>
+					<button class="button">SEND</button>
+				</form>
+			</div>
+		</section>
 	</body>
 </html>

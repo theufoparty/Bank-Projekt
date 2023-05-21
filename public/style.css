@@ -3,10 +3,17 @@
 	margin: 0;
 	box-sizing: border-box;
 	font-family: "Bellefair", serif;
+	font-weight: 400;
 	list-style: none;
 	text-decoration: none;
 	background: black;
 	color: white;
+}
+
+:root {
+	--ff-serif: "Bellefair", serif;
+	--ff-sans-cond: "Barlow Condensed", sans-serif;
+	--ff-sans-normal: "Barlow", sans-serif;
 }
 
 .header {
@@ -47,7 +54,7 @@ footer {
 .navlist a {
 	color: white;
 	margin-left: 60px;
-	font-size: 15px;
+	font-size: 1rem;
 	border-bottom: 2px solid transparent;
 	transition: all 0.55s ease;
 }
@@ -61,7 +68,7 @@ footer {
 .create-page,
 .intro-text {
 	height: 100%;
-	width: 100%;
+	width: 80%;
 	min-height: 100vh;
 	position: relative;
 	display: flex;
@@ -69,18 +76,37 @@ footer {
 	align-items: center;
 	align-content: center;
 	justify-content: center;
+	justify-self: center;
+}
+
+.account-container {
+	height: 100%;
+	width: 80%;
+	min-height: 100vh;
+	position: relative;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	justify-self: center;
+}
+
+.content-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 form {
 	display: flex;
 	flex-direction: column;
-	width: 90%;
+	width: 100%;
 	max-width: 600px;
 }
 
 label {
 	padding: 10px 10px 10px 0;
-	font-size: 18px;
+	font-size: 1rem;
 }
 
 input {
@@ -95,29 +121,68 @@ input {
 	font-size: 16px;
 }
 
-button {
-	margin-top: 2rem;
-	font-size: 18px;
+.button {
+	border: none;
+	width: fit-content;
+	font-size: 1rem;
+	background-color: white;
+	color: black;
+	padding: 0.4rem;
+	border-radius: 4px;
+	margin-top: 1rem;
+}
+
+.logout-button {
+	border: none;
+	width: fit-content;
+	margin-left: 60px;
+	font-size: 1rem;
+}
+
+.account-details-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.deposit-withdraw-form-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.account-name,
+.account-balance {
+	padding: 0.8rem 0.8rem 0.8rem 0rem;
+	font-size: 1.5rem;
+}
+
+.welcome-text {
+	font-size: 1rem;
+	font-family: "Barlow";
+	line-height: 1.5;
+}
+
+table {
+	font-size: 1.2rem;
+	width: 80%;
+	background-color: white;
 	border: none;
 }
 
 td {
-	padding: 10px 20px;
+	padding-top: 20px;
 }
 
-/* TYPEOGRAPHY */
+th {
+	text-align: left;
+	background-color: white;
+	color: black;
+	padding: 20px 20px 20px 5px;
+}
 
-:root {
-	--fs-900: clamp(1rem, 6vw + 1rem, 9.375rem);
-	--fs-800: 3.5rem;
-	--fs-700: 1.5rem;
-	--fs-600: 1rem;
-	--fs-500: 1rem;
-	--fs-400: 0.9375rem;
-	--fs-300: 0.5rem;
-	--fs-200: 0.6rem;
-
-	--ff-serif: "Bellefair", serif;
-	--ff-sans-cond: "Barlow Condensed", sans-serif;
-	--ff-sans-normal: "Barlow", sans-serif;
+.underline {
+	text-decoration: underline;
+	text-transform: uppercase;
 }

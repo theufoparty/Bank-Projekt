@@ -3,17 +3,17 @@ export const addHeader = () => {
 	const header = document.createElement("header");
 	header.innerHTML = `
 	    <header class="header">
-	    <a href="./" class="logo">Banken</a>
+	    <a href="./" class="logo">THE BANK</a>
 	    <ul class="navlist">
-	        <li><a href="./">Home</a></li>
+	        <li><a href="./">HOME</a></li>
 
 	     ${
 					user
-						? `<li><a href="./accounts.html">Accounts</a></li>
-	        <li><a href="./accounts-create.html">Create Account</a></li>
-			<button>Logout</button>`
-						: `<li><a href="./login.html">Login</a></li>
-						<li><a href="./create-user.html">Create User</a></li>`
+						? `<li><a href="./accounts.html">ACCOUNTS</a></li>
+	        <li><a href="./accounts-create.html">CREATE ACCOUNT</a></li>
+			<li><button class="logout-button">LOGOUT</button></li>`
+						: `<li><a href="./login.html">LOGIN</a></li>
+						<li><a href="./create-user.html">CREATE USER</a></li>`
 				}
 
 			

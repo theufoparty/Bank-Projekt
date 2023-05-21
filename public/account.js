@@ -10,8 +10,8 @@ fetch(`/accounts/${id}`)
 		return response.json();
 	})
 	.then((data) => {
-		document.getElementById("account-name").innerText = `Name: ${data.name}`;
-		document.getElementById("account-balance").innerText = `Mängd pengar: ${data.balance}`;
+		document.getElementById("account-name").innerText = `NAME: ${data.name}`;
+		document.getElementById("account-balance").innerText = `AMOUNT: ${data.balance}`;
 	});
 
 const withdrawalForm = document.getElementById("withdraw");
