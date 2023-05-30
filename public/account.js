@@ -12,15 +12,16 @@ fetch(`/accounts/${id}`)
 	.then((data) => {
 		document.getElementById("account-name").innerText = `NAME: ${data.name}`;
 		document.getElementById("account-balance").innerText = `AMOUNT: ${data.balance}`;
+		document.getElementById("withdraw").max = data.balance;
 	});
 
-const withdrawalForm = document.getElementById("withdraw");
+const withdrawalForm = document.getElementById("withdraw-form");
 withdrawalForm.addEventListener("submit", (event) => {
 	event.preventDefault();
 	withdraw(id, withdrawalForm.withdraw.value);
 });
 
-const depositForm = document.getElementById("deposit");
+const depositForm = document.getElementById("deposit-form");
 depositForm.addEventListener("submit", (event) => {
 	event.preventDefault();
 	deposit(id, depositForm.deposit.value);

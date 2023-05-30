@@ -114,17 +114,23 @@ app.put("/accounts/:id/withdrawing", async (req, res) => {
 app.put("/accounts/:id/deposit", async (req, res) => {
 	let account = await accountCollection.findOne({ _id: new ObjectId(req.params.id) });
 
-	const depositAmount = req.body.depositAmount;
+	const depositAmount = Number(req.body.depositAmount);
 
-	account = {
-		...account,
-		balance: Number(account.balance) + Number(depositAmount),
-	};
-	await accountCollection.updateOne({ _id: new ObjectId(req.params.id) }, { $set: account });
-	res.json({
-		success: true,
-		account,
-	});
+	if (depositAmount < 0) {
+		res.json({
+			success: false,
+		});
+	} else {
+		account = {
+			...account,
+			balance: Number(account.balance) + depositAmount,
+		};
+		await accountCollection.updateOne({ _id: new ObjectId(req.params.id) }, { $set: account });
+		res.json({
+			success: true,
+			account,
+		});
+	}
 });
 
 // DELETE account
